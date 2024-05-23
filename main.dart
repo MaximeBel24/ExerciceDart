@@ -1,3 +1,6 @@
+import 'dart:io';
+import 'dart:math';
+
 // Créez un programme qui demande à l'utilisateur d'entrer son nom et son âge. 
 // Imprimez un message indiquant le nombre d'années qu'il reste à l'utilisateur pour atteindre l'âge de 100 ans.
 
@@ -154,8 +157,44 @@ void isGirls(){
   });
 }
 
-// Créez un jeu de Roche-Papier-Ciseaux à deux joueurs contre l'ordinateur.
-// Demandez aux joueurs de s'exprimer, comparez-les, imprimez un message au vainqueur.
+// Générer un nombre aléatoire entre 1 et 100. Demandez à l'utilisateur de deviner le nombre,
+// puis dites-lui s'il a deviné trop bas, trop haut ou exactement juste
+// Notez le nombre de suppositions faites par l'utilisateur et, à la fin du jeu, imprimez-le.
+
+// void guessRandomNumber() {
+
+//   bool isGuessed = false;
+//   var rng = new Random();
+//   int numberToGuess = 1 + rng.nextInt(100);
+//   List<int> numberInput = [];
+//   int numberOfTurns = 0;
+
+//   while (isGuessed != true) {
+//     print("Rappel des numéro déja entré: $numberInput");
+//     stdout.write('Entrez un nombre entre 1 et 100: ');
+//     String? input = stdin.readLineSync();
+
+//     if (input != null) {
+//       int userNumber = int.tryParse(input) ?? 0;
+//         if (userNumber < numberToGuess && userNumber > 1) {
+//           print("Le nombre à deviner est plus GRAND que $userNumber");
+//           numberOfTurns += 1;
+//           numberInput.add(userNumber);
+//         } else if (userNumber > numberToGuess && userNumber < 100) {
+//           print("Le nombre à deviner est plus PETIT que $userNumber");
+//           numberOfTurns += 1;
+//           numberInput.add(userNumber);
+//         } else if (userNumber == numberToGuess) {
+//           numberOfTurns +=1;
+//           print("Bravo ! Le nombre à devinez est bien $numberToGuess. Vous l'avez deviné au bout de $numberOfTurns tours");
+//           isGuessed = true;
+//         } else if (userNumber > 100 ||userNumber < 1) {
+//           print("Vous devez rentrez un nombre entre 1 et 100");
+//         }
+//     }
+//   }
+
+// }
 
 
 
@@ -208,8 +247,12 @@ main() {
   // ageAppropriateDrinks(53);
   // ageAppropriateDrinks(-250);
   // print(" ");
-    // print("----------Exercice 10----------");
-  print(" ");
-  isGirls();
-  print(" ");
+  // print("----------Exercice 10----------");
+  // print(" ");
+  // isGirls();
+  // print(" ");
+  // print("----------Exercice 11----------");
+  // print(" ");
+  // guessRandomNumber();
+  // print(" ");
 }
