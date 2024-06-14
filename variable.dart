@@ -179,7 +179,7 @@ void caloricCalculation(String sexe, int poids, int taille, int age ){
 // Vous Essaierez ensuite d'utiliser le /= et vous noterez
 // une erreur. Tentez de l'expliquer
 
-void binaryOperators( int a, int b) {
+void binaryOperators(int a, int b) {
 
   a += b;
   print("Après ddition : $a");
@@ -194,6 +194,76 @@ void binaryOperators( int a, int b) {
   print("Après division : On ne peut pas, la division a /= b renvoie un type double (decimal) alors que la variable a est de type int (entier).");
 }
 
+// L'objectif de cet exercice est de créer un programme qui prend
+//  en entrée deux nombres entiers a et b, et qui détermine si
+// a est égal,
+// différent,
+// inférieur
+// ou supérieur à b.
+// Les comparaisons ne se feront qu'a partir de print().
+
+void comparatingOperators(int a, int b) {
+
+  if ( a == b ){
+    print("a: $a est égal à b: $b");
+  } else if (a != b ){
+    print("a: $a est différent de b: $b");
+    if (a < b ){
+      print("a: $a est inférieur à b: $b");
+    } else if (a > b ){
+      print("a: $a est supérieur à b: $b");
+    }
+  }
+
+  print("$a est égal à $b => ${a == b}");
+  print("$a est différent de $b => ${a != b}");
+  print("$a est inférieur à $b => ${a < b}");
+  print("$a est supérieur à $b => ${a > b}");
+
+}
+
+// Vous êtes en train de développer un programme pour 
+// une entreprise de livraison.
+// Leur politique est que les livraisons ne peuvent 
+// être effectuées que si la commande est :
+// payée
+// que l'adresse de livraison est valide.
+// Votre tâche est de créer un programme qui utilise 
+// l'opérateur logique && pour vérifier si ces deux 
+// conditions sont remplies.
+
+void deliveryFactory(bool isPayed, bool addressIsValid){
+
+  if (isPayed == true && addressIsValid == true) {
+    print("La commande est payée et l'adresse est valide. La livraison peut être effectuée.");
+  } else if (isPayed == true && addressIsValid == false) {
+    print("La commande est payée mais l'adresse n'est pas valide. La livraison ne peut pas être effectuée.");
+  } else if (isPayed == false && addressIsValid == true) {
+    print("La commande n'est pas payée et l'adresse est valide. La livraison ne peut pas être effectuée.");
+  } else if (isPayed == false && addressIsValid == false) {
+    print("La commande n'est pas payée et l'adresse n'est pas valide. La livraison ne peut pas être effectuée.");
+  }
+}
+
+// Dans cet exercice, nous allons travailler avec l'opérateur ternaire 
+// en Dart. Votre mission consiste à écrire une fonction qui permet de 
+// vérifier si un nombre donné est pair ou impair en utilisant l'opérateur ternaire.
+
+// La fonction devra:
+
+// Prendre en paramètre un int
+
+// Retourner une String. Si le nombre est pair, le retour 
+// sera "Le nombre est pair" et si le nombre est impair, 
+// il devra retourner "Le nombre est impair".
+
+// Vous appelerez ensuite votre fonction au sein de plusieurs print() pour 
+// tester si elle fonctionne bien.
+
+String ternaryOperator(int input) {
+  String answer = (input % 2 == 0) ? "$input est pair" : "$input est impair";
+  return answer;
+}
 
 void main(List<String> args) {
   // shoppingList("pommes", 5, 3.99);
@@ -220,5 +290,13 @@ void main(List<String> args) {
   // caloricCalculation("femme", 60, 185, 35);
   // caloricCalculation("homme", 67, 183, 27);
   // caloricCalculation("non binaire", 67, 183, 27);
-  binaryOperators(10, 5);
+  // binaryOperators(10, 5);
+  // comparatingOperators(9, 14);
+  // deliveryFactory(false, false);
+  // deliveryFactory(true, false);
+  // deliveryFactory(false, true);
+  // deliveryFactory(true, true);
+
+  print(ternaryOperator(56));
+  print(ternaryOperator(263));
 }
