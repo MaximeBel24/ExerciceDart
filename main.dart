@@ -161,43 +161,56 @@ void isGirls(){
 // puis dites-lui s'il a deviné trop bas, trop haut ou exactement juste
 // Notez le nombre de suppositions faites par l'utilisateur et, à la fin du jeu, imprimez-le.
 
-// void guessRandomNumber() {
+void guessRandomNumber() {
 
-//   bool isGuessed = false;
-//   var rng = new Random();
-//   int numberToGuess = 1 + rng.nextInt(100);
-//   List<int> numberInput = [];
-//   int numberOfTurns = 0;
+  bool isGuessed = false;
+  var rng = new Random();
+  int numberToGuess = 1 + rng.nextInt(100);
+  List<int> numberInput = [];
+  int numberOfTurns = 0;
 
-//   while (isGuessed != true) {
-//     print("Rappel des numéro déja entré: $numberInput");
-//     stdout.write('Entrez un nombre entre 1 et 100: ');
-//     String? input = stdin.readLineSync();
+  while (isGuessed != true) {
+    print("Rappel des numéro déja entré: $numberInput");
+    stdout.write('Entrez un nombre entre 1 et 100: ');
+    String? input = stdin.readLineSync();
 
-//     if (input != null) {
-//       int userNumber = int.tryParse(input) ?? 0;
-//         if (userNumber < numberToGuess && userNumber > 1) {
-//           print("Le nombre à deviner est plus GRAND que $userNumber");
-//           numberOfTurns += 1;
-//           numberInput.add(userNumber);
-//         } else if (userNumber > numberToGuess && userNumber < 100) {
-//           print("Le nombre à deviner est plus PETIT que $userNumber");
-//           numberOfTurns += 1;
-//           numberInput.add(userNumber);
-//         } else if (userNumber == numberToGuess) {
-//           numberOfTurns +=1;
-//           print("Bravo ! Le nombre à devinez est bien $numberToGuess. Vous l'avez deviné au bout de $numberOfTurns tours");
-//           isGuessed = true;
-//         } else if (userNumber > 100 ||userNumber < 1) {
-//           print("Vous devez rentrez un nombre entre 1 et 100");
-//         }
-//     }
-//   }
+    if (input != null) {
+      int userNumber = int.tryParse(input) ?? 0;
+        if (userNumber < numberToGuess && userNumber > 1) {
+          print("Le nombre à deviner est plus GRAND que $userNumber");
+          numberOfTurns += 1;
+          numberInput.add(userNumber);
+        } else if (userNumber > numberToGuess && userNumber < 100) {
+          print("Le nombre à deviner est plus PETIT que $userNumber");
+          numberOfTurns += 1;
+          numberInput.add(userNumber);
+        } else if (userNumber == numberToGuess) {
+          numberOfTurns +=1;
+          print("Bravo ! Le nombre à devinez est bien $numberToGuess. Vous l'avez deviné au bout de $numberOfTurns tours");
+          isGuessed = true;
+        } else if (userNumber > 100 ||userNumber < 1) {
+          print("Vous devez rentrez un nombre entre 1 et 100");
+        }
+    }
+  }
 
-// }
+}
 
 
+// Écrivez un programme qui prend une liste de nombres
+// et qui crée une nouvelle liste composée uniquement du premier et du dernier élément de la liste donnée. 
+// Pour vous entraîner, écrivez ce code dans une fonction.
 
+void firstAndLastNumber() {
+
+  List<int> numberList = [5, 10, 15, 20, 25, 56, 85, 23];
+  List<int> newNumberList = [];
+
+  newNumberList.add(numberList[0]);
+  newNumberList.add(numberList[numberList.length - 1]);
+
+  print(newNumberList);
+}
 
 main() {
   // print(" ");
@@ -255,4 +268,16 @@ main() {
   // print(" ");
   // guessRandomNumber();
   // print(" ");
+  // print(" ");
+  // print("----------Exercice 12----------");
+  // print(" ");
+  // firstAnvoid firstAndLastNumber() {
+
+  List<int> numberList = [5, 10, 15, 20, 25, 56, 85, 23];
+  List<int> newNumberList = [];
+
+  newNumberList.add(numberList[0]);
+  newNumberList.add(numberList[numberList.length - 1]);
+
+  print(newNumberList);
 }
