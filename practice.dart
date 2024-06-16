@@ -1,7 +1,2 @@
 
 
-void main() {
- 
-  firstAndLastNumber();
-
-}
