@@ -1,5 +1,3 @@
-import 'dart:math';
-
 // Vous travaillez sur un projet de liste de courses pour une 
 // application mobile et vous devez déclarer des variables pour 
 // les produits, leur quantité et leur prix.
@@ -267,80 +265,38 @@ String ternaryOperator(int input) {
   return answer;
 }
 
-// Ecrire un programme en Dart qui prend un nombre entier en entrée,
-// calcule sa racine carrée et affiche le résultat à l'écran.
- 
-void squareRoot(int number) {
-  double squareRoot = sqrt(number);
-  print("La racine carrée de $number est ${squareRoot.toInt()}");
-}
-
-// Ecrire un programme qui demande à l'utilisateur  son âge et si vous êtes une fille.
-// Si l'âge est supérieur ou égal à 18 ans OU si vous êtes une fille, 
-// affichez "Bienvenue!" à l'écran.
-// Sinon, affichez "Désolé, vous n'êtes pas éligible pour cette offre."
-
-void mecEnChien(int age, String sexe) {
-  if (age >= 18 || sexe == "fille" || sexe == "Fille" || sexe == "femme" || sexe == "Femme") {
-    print("Bienvenue !");
-  } else {
-    print("Casse toi clochard");
-  }
-}
-
 void main(List<String> args) {
-
   // shoppingList("pommes", 5, 3.99);
   // print(" ");
   // print(" ");
-
   // dayInAWeek();
   // print(" ");
   // print(" ");
-
   // print("Exercice 3");
   // primitiveTypes();
   // print(" ");
   // print(" ");
-
   // stringToUppercase();
   // print(" ");
   // print(" ");
-
   // stringToLowercase();
   // print(" ");
   // print(" ");
-
   // accountIsGood("Elden Ring Shadow of the Erdtree sort dans une semaine");
-
   // expertToCall("Monster Hunter Wilds");
-
   // replaceLetter();
-
   // calcul(24, 7);
-
   // convertir();
-
   // caloricCalculation("femme", 60, 185, 35);
   // caloricCalculation("homme", 67, 183, 27);
   // caloricCalculation("non binaire", 67, 183, 27);
-
   // binaryOperators(10, 5);
-
   // comparatingOperators(9, 14);
-
   // deliveryFactory(false, false);
   // deliveryFactory(true, false);
   // deliveryFactory(false, true);
   // deliveryFactory(true, true);
 
-  // print(ternaryOperator(56));
-  // print(ternaryOperator(263));
-
-  // squareRoot(25);
-
-  mecEnChien(2, "fille");
-  mecEnChien(25, "homme");
-  mecEnChien(17, "homme");
-  mecEnChien(43, "femme");
+  print(ternaryOperator(56));
+  print(ternaryOperator(263));
 }
